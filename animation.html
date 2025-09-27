@@ -1,0 +1,112 @@
+<html>
+
+<head>
+    <title>Animation</title>
+</head>
+<style>
+    @keyframes colorchange {
+        0% {
+            background: red;
+            top: 0px;
+            left: 0px;
+        }
+        25% {
+            background: blue;
+            top: 0px;
+            left: 300px;
+        }
+        50% {
+            background: black;
+            top: 300px;
+            left: 300px;
+        }
+        75% {
+            background: green;
+            top: 300px;
+            left: 0px;
+        }
+        100% {
+            background: yellow;
+            top: 0px;
+            left: 0px;
+        }
+    }
+    
+    .main {
+        width: 150px;
+        height: 150px;
+        background: red;
+        position: relative;
+        animation: colorchange 5s 0s infinite linear;
+    }
+    
+    @keyframes mytruck {
+        0% {
+            left: -200px;
+        }
+        100% {
+            left: 120%;
+        }
+    }
+    
+    .truck {
+        position: fixed;
+        bottom: 0px;
+        left: -200px;
+        animation: mytruck 10s infinite linear;
+    }
+    
+    img {
+        width: 200px;
+    }
+    
+    @keyframes wheelouter {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+    
+    .wheels {
+        display: flex;
+        justify-content: space-around;
+        /* height: 100px;
+        width: 100px; */
+    }
+    
+    .wheels #wheel1 {
+        width: 55px;
+        position: absolute;
+        top: 28px;
+        left: 18px;
+    }
+    
+    .wheels #wheel2 {
+        width: 55px;
+        position: absolute;
+        top: 28px;
+        right: 28;
+    }
+    
+    .wheels img {
+        animation: wheelouter 2s infinite linear;
+    }
+</style>
+
+<body>
+    <div class="main">
+    </div>
+    <div class="truck">
+        <img src="car.png" />
+        <div class="wheels">
+            <img src="wheel.png" id="wheel1" />
+            <img src="wheel.png" id="wheel2" />
+        </div>
+
+    </div>
+
+</body>
+
+</html>
